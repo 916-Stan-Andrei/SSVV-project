@@ -6,6 +6,7 @@ import ssvv.example.domain.Student;
 import ssvv.example.domain.Tema;
 import ssvv.example.service.Service;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class UI {
@@ -61,8 +62,15 @@ public class UI {
         System.out.println("Introduceti numele studentului: ");
         String nume = scanner.nextLine();
 
-        System.out.println("Introduceti grupa studentului: ");
-        int grupa = scanner.nextInt();
+        int grupa;
+        try {
+            System.out.println("Introduceti grupa studentului: ");
+            grupa = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("Input invalid! Introduceti un numar intreg pentru grupa. \n");
+            scanner.next();
+            return;
+        }
 
         if (service.saveStudent(id, nume, grupa) != 0) {
             System.out.println("Student adaugat cu succes! \n");

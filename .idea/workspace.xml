@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1a5a573d-f975-4b3a-89db-fff580ca9a20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/AbstractXMLRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/StudentXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/StudentXMLRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/console/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/console/UI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/TestAddStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/TestAddStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/studenti.xml" beforeDir="false" afterPath="$PROJECT_DIR$/studenti.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testStudent" beforeDir="false" afterPath="$PROJECT_DIR$/testStudent" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +44,19 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.TestAddStudent">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.Main" />
+      <module name="LabAssiAsseProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestAddStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LabAssiAsseProject" />
       <extension name="coverage">
@@ -61,7 +72,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAddStudent.testAddStudent_groupIsNegativeNumberGreaterThanMaxInt_studentNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAddStudent.testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LabAssiAsseProject" />
       <extension name="coverage">
         <pattern>
@@ -71,7 +82,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example.tests" />
       <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddStudent" />
-      <option name="METHOD_NAME" value="testAddStudent_groupIsNegativeNumberGreaterThanMaxInt_studentNotAdded" />
+      <option name="METHOD_NAME" value="testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -109,29 +120,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAddStudent.testAddStudent_nameIsAlphabetical_addsStudentCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LabAssiAsseProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddStudent" />
-      <option name="METHOD_NAME" value="testAddStudent_nameIsAlphabetical_addsStudentCorrectly" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestAddStudent" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TestAddStudent.testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" />
         <item itemvalue="JUnit.TestAddStudent.testAddStudent_nameContainsIntegers_studentNotAdded" />
         <item itemvalue="JUnit.TestAddStudent.testAddStudent_groupWithInvalidBoundaries_studentNotAdded" />
-        <item itemvalue="JUnit.TestAddStudent.testAddStudent_groupIsNegativeNumberGreaterThanMaxInt_studentNotAdded" />
-        <item itemvalue="JUnit.TestAddStudent.testAddStudent_nameIsAlphabetical_addsStudentCorrectly" />
       </list>
     </recent_temporary>
   </component>
@@ -144,7 +139,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712231497122</updated>
       <workItem from="1712231498622" duration="2253000" />
-      <workItem from="1712237521669" duration="6622000" />
+      <workItem from="1712237521669" duration="12042000" />
     </task>
     <servers />
   </component>

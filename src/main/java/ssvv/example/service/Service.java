@@ -8,6 +8,7 @@ import ssvv.example.domain.Tema;
 import ssvv.example.repository.NotaXMLRepository;
 import ssvv.example.repository.StudentXMLRepository;
 import ssvv.example.repository.TemaXMLRepository;
+import ssvv.example.validation.ValidationException;
 
 import java.time.LocalDate;
 import java.time.temporal.WeekFields;
@@ -30,7 +31,22 @@ public class Service {
 
     public Iterable<Nota> findAllNote() { return notaXmlRepo.findAll(); }
 
+
+    private boolean containsIntegers(String str) {
+        for (char c : str.toCharArray()) {
+            if (Character.isDigit(c)) {
+                return true;
+            }
+        }
+        return false;
+    }
     public int saveStudent(String id, String nume, int grupa) {
+        if (Long.parseLong(id) > Integer.MAX_VALUE){
+            return 0;
+        }
+        if (containsIntegers(nume) || Integer.parseInt(id) < 0 || grupa < 111 || grupa >937 ) {
+            return 0;
+        }
         Student student = new Student(id, nume, grupa);
         Student result = studentXmlRepo.save(student);
 

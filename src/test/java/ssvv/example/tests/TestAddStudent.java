@@ -4,19 +4,28 @@ package ssvv.example.tests;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import ssvv.example.console.UI;
 import ssvv.example.domain.Student;
 import ssvv.example.repository.StudentXMLRepository;
 import ssvv.example.service.Service;
 import ssvv.example.validation.ValidationException;
 import ssvv.example.validation.Validator;
 
-import static org.junit.Assert.assertEquals;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+import java.io.PrintStream;
+import java.util.InputMismatchException;
+
+import static org.junit.Assert.*;
 
 
 public class TestAddStudent {
     private Validator<Student> studentValidator;
     private StudentXMLRepository studentXMLRepository;
     private Service service;
+
+    private UI ui;
 
     @Before
     public void setUp() {
@@ -36,6 +45,7 @@ public class TestAddStudent {
         };
         studentXMLRepository = new StudentXMLRepository(studentValidator, "testStudent");
         service = new Service(studentXMLRepository, null, null);
+        ui = new UI(service);
     }
 
     @After
@@ -67,7 +77,7 @@ public class TestAddStudent {
     @Test
     public void testAddStudent_idIsNotNaturalNumber_studentNotAdded(){
         assertEquals(0, service.saveStudent("-1", "Bob", 211));
-        assertEquals(0, service.saveStudent("2.5", "Bob", 212));
+        assertEquals(0, service.saveStudent("-200", "Bob", 212));
     }
 
 
@@ -93,8 +103,20 @@ public class TestAddStudent {
     }
 
     @Test
-    public void testAddStudent_groupIsNegativeNumberGreaterThanMaxInt_studentNotAdded() {
-        assertEquals(0, service.saveStudent("4", "Bob", Integer.MAX_VALUE + 1));
+    public void testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException() {
+        String inputId = "123456";
+        String inputName = "Bob";
+        String inputGroup = Long.toString(((long) Integer.MAX_VALUE) + 1);
+
+        ByteArrayInputStream in = new ByteArrayInputStream((inputId + "\n" + inputName + "\n" + inputGroup).getBytes());
+        System.setIn(in);
+
+        ByteArrayOutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+
+        ui.uiSaveStudent();
+
+        assertTrue(out.toString().contains("Input invalid! Introduceti un numar intreg pentru grupa."));
     }
 
     //Special BVA
