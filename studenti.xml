@@ -4,6 +4,10 @@
         <Nume>123</Nume>
         <Grupa>227</Grupa>
     </student>
+    <student ID="3">
+        <Nume>vsd</Nume>
+        <Grupa>121</Grupa>
+    </student>
     <student ID="4">
         <Nume>Ion</Nume>
         <Grupa>227</Grupa>

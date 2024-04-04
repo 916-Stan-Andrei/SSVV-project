@@ -29,4 +29,8 @@ public class StudentXMLRepository extends AbstractXMLRepository<String, Student>
 
         return new Student(ID, nume, grupa);
     }
+
+    public void clearAllStudents() {
+        clearAllEntities();
+    }
 }

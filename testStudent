@@ -1,15 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Entitati>
-    <student ID="0">
-        <Nume>Bob</Nume>
-        <Grupa>211</Grupa>
-    </student>
-    <student ID="1">
-        <Nume>Bob</Nume>
-        <Grupa>212</Grupa>
-    </student>
-    <student ID="2">
-        <Nume>Bob</Nume>
-        <Grupa>213</Grupa>
-    </student>
-</Entitati>
+<Entitati/>

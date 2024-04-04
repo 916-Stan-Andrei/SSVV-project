@@ -77,6 +77,10 @@ public abstract class AbstractXMLRepository<ID, E extends HasID<ID>> extends Abs
             te.printStackTrace();
         }
     }
+    protected void clearAllEntities() {
+        entities.clear(); // Clear all entities from the repository
+        writeToXmlFile(); // Update the XML file
+    }
 
     protected Element createElement(Document XMLdocument, String tag, String value) {
         Element element = XMLdocument.createElement(tag);

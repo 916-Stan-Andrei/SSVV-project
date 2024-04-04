@@ -1,6 +1,7 @@
 package ssvv.example.tests;
 
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import ssvv.example.domain.Student;
@@ -9,7 +10,8 @@ import ssvv.example.service.Service;
 import ssvv.example.validation.ValidationException;
 import ssvv.example.validation.Validator;
 
-import static junit.framework.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
+
 
 public class TestAddStudent {
     private Validator<Student> studentValidator;
@@ -36,16 +38,86 @@ public class TestAddStudent {
         service = new Service(studentXMLRepository, null, null);
     }
 
-    @Test
-    public void testAddStudent_grupaValida() {
-        assertEquals(service.saveStudent("0", "Bob", 211), 0);
-        assertEquals(service.saveStudent("1", "Bob", 212), 0);
-        assertEquals(service.saveStudent("2", "Bob", 213), 0);
+    @After
+    public void tearDown() {
+        studentXMLRepository.clearAllStudents();
     }
 
     @Test
-    public void testAddStudent_grupaInvalida() {
-        assertEquals(service.saveStudent("0", "Bob", -2), 1);
-        assertEquals(service.saveStudent("1", "Bob", 4000), 1);
+    public void testAddStudent_nameIsAlphabetical_addsStudentCorrectly(){
+        assertEquals(1, service.saveStudent("1", "Bob", 211));
+        assertEquals(1, service.saveStudent("2", "Maria", 211));
+        assertEquals(1, service.saveStudent("3", "Ion", 211));
+    }
+
+    @Test
+    public void testAddStudent_nameContainsIntegers_studentNotAdded(){
+        assertEquals(0, service.saveStudent("0", "B1b", 211));
+        assertEquals(0, service.saveStudent("1", "1112", 212));
+        assertEquals(0, service.saveStudent("2", "342687", 213));
+    }
+
+    @Test
+    public void testAddStudent_idIsNaturalNumberLessThanMaxInt_addsStudentCorrectly(){
+        assertEquals(1, service.saveStudent("0", "Bob", 211));
+        assertEquals(1, service.saveStudent("1", "Bob", 212));
+        assertEquals(1, service.saveStudent("2", "Bob", 213));
+    }
+
+    @Test
+    public void testAddStudent_idIsNotNaturalNumber_studentNotAdded(){
+        assertEquals(0, service.saveStudent("-1", "Bob", 211));
+        assertEquals(0, service.saveStudent("2.5", "Bob", 212));
+    }
+
+
+    @Test
+    public void testAddStudent_studentIdAlreadyExists_studentNotAdded() {
+        String studentId = "123";
+        service.saveStudent(studentId, "Alice", 123);
+
+        assertEquals(0, service.saveStudent(studentId, "Bob", 456));
+    }
+
+    @Test
+    public void testAddStudent_groupIsNaturalNumberInTheGivenRange_addsStudentCorrectly() {
+        assertEquals(1, service.saveStudent("0", "Bob", 211));
+        assertEquals(1, service.saveStudent("1", "Bob", 212));
+        assertEquals(1, service.saveStudent("2", "Bob", 213));
+    }
+
+    @Test
+    public void testAddStudent_groupIsNegativeNumber_studentNotAdded() {
+        assertEquals(0, service.saveStudent("0", "Bob", -2));
+        assertEquals(0, service.saveStudent("0", "Bob", -500));
+    }
+
+    @Test
+    public void testAddStudent_groupIsNegativeNumberGreaterThanMaxInt_studentNotAdded() {
+        assertEquals(0, service.saveStudent("4", "Bob", Integer.MAX_VALUE + 1));
+    }
+
+    //Special BVA
+
+    @Test
+    public void testAddStudent_idLessOrEqualThenMaxInt_addsStudentCorrectly(){
+        assertEquals(1, service.saveStudent("2147483647", "Bob", 211));
+        assertEquals(1, service.saveStudent("2147483646", "Bob", 211));
+    }
+
+    @Test
+    public void testAddStudent_idIsNaturalNumberGreaterThanMaxInt_studentNotAdded(){
+        assertEquals(0, service.saveStudent("2147483648", "Bob", 211));
+    }
+
+    @Test
+    public void testAddStudent_groupWithValidBoundaries_addsStudentCorrectly(){
+        assertEquals(1, service.saveStudent("1", "Bob", 111));
+        assertEquals(1, service.saveStudent("2", "Bob", 937));
+    }
+    @Test
+    public void testAddStudent_groupWithInvalidBoundaries_studentNotAdded(){
+        assertEquals(0, service.saveStudent("1", "Bob", 110));
+        assertEquals(0, service.saveStudent("2", "Bob", 938));
     }
 }
