@@ -31,4 +31,8 @@ public class TemaXMLRepository extends AbstractXMLRepository<String, Tema> {
 
         return new Tema(ID, descriere, deadline, startline);
     }
+
+    public void clearAllAssignments() {
+        clearAllEntities();
+    }
 }

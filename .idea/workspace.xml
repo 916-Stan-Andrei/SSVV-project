@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a5a573d-f975-4b3a-89db-fff580ca9a20" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/TestAddAssignment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/console/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/console/UI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/TestAddStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/TestAddStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaXMLRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +49,7 @@
       <recent name="C:\Users\stanbydrew\Desktop\University\Sem6\SSVV\Lab1\LabAssiAsseProject\src\main\java\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAddStudent">
+  <component name="RunManager" selected="JUnit.TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssvv.example.Main" />
       <module name="LabAssiAsseProject" />
@@ -53,6 +59,37 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAddAssignment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabAssiAsseProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddAssignment" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LabAssiAsseProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddAssignment" />
+      <option name="METHOD_NAME" value="testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -88,45 +125,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAddStudent.testAddStudent_groupWithInvalidBoundaries_studentNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LabAssiAsseProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddStudent" />
-      <option name="METHOD_NAME" value="testAddStudent_groupWithInvalidBoundaries_studentNotAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAddStudent.testAddStudent_nameContainsIntegers_studentNotAdded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LabAssiAsseProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddStudent" />
-      <option name="METHOD_NAME" value="testAddStudent_nameContainsIntegers_studentNotAdded" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded" />
+        <item itemvalue="JUnit.TestAddAssignment" />
         <item itemvalue="JUnit.TestAddStudent" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestAddStudent.testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" />
-        <item itemvalue="JUnit.TestAddStudent.testAddStudent_nameContainsIntegers_studentNotAdded" />
-        <item itemvalue="JUnit.TestAddStudent.testAddStudent_groupWithInvalidBoundaries_studentNotAdded" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +144,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712231497122</updated>
       <workItem from="1712231498622" duration="2253000" />
-      <workItem from="1712237521669" duration="12042000" />
+      <workItem from="1712237521669" duration="12305000" />
+      <workItem from="1712294880598" duration="1271000" />
     </task>
     <servers />
   </component>
