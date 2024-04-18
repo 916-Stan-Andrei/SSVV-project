@@ -14,17 +14,13 @@ import static org.junit.Assert.*;
 
 public class TestAddAssignment {
 
-    private Validator<Tema> temaValidator;
-
     private TemaXMLRepository temaXMLRepository;
 
     private Service service;
 
-    private UI ui;
-
     @Before
     public void setUp(){
-        temaValidator = new Validator<Tema>() {
+        Validator<Tema> temaValidator = new Validator<Tema>() {
             @Override
             public void validate(Tema tema) throws ValidationException {
                 if (tema.getID() == null || tema.getID().equals("")) {
@@ -44,7 +40,7 @@ public class TestAddAssignment {
 
         temaXMLRepository = new TemaXMLRepository(temaValidator, "testTema");
         service = new Service(null, temaXMLRepository, null);
-        ui = new UI(service);
+        UI ui = new UI(service);
     }
 
     @After
@@ -59,9 +55,70 @@ public class TestAddAssignment {
     }
 
     @Test
-    public void testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded(){
-        assertEquals(0, service.saveTema("1", "descriere1", 15, 1));
-        assertEquals(0, service.saveTema("2", "descriere2", 13, 0));
+    public void testAddAssignment_startlineLowerThanTheLowerBound_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("2", "descriere2", 13, 0);
+        });
+        assertEquals("Data de primire invalida! \n", exception.getMessage());
     }
+
+    @Test
+    public void testAddAssignment_startlineGreaterThanTheUpperBound_throwsException(){
+        // This test satisfies also the situation when deadline is less than startline
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("2", "descriere2", 3, 15);
+        });
+        assertEquals("Deadline invalid! \n", exception.getMessage());
+    }
+
+    @Test
+    public void testAddAssignment_deadlineLowerThanTheLowerBound_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("2", "descriere2", 0, 12);
+        });
+        assertEquals("Deadline invalid! \n", exception.getMessage());
+    }
+
+    @Test
+    public void testAddAssignment_deadlineGreaterThanTheUpperBound_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("2", "descriere2", 15, 12);
+        });
+        assertEquals("Deadline invalid! \n", exception.getMessage());
+    }
+
+    @Test
+    public void testAddAssignment_nullDescription_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("2", null, 5, 7);
+        });
+        assertEquals("Descriere invalida! \n", exception.getMessage());
+    }
+
+    @Test
+    public void testAddAssignment_emptyDescription_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("2", "", 5, 7);
+        });
+        assertEquals("Descriere invalida! \n", exception.getMessage());
+    }
+
+    @Test
+    public void testAddAssignment_nullId_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema(null, "desc", 5, 7);
+        });
+        assertEquals("ID invalid! \n", exception.getMessage());
+    }
+
+    @Test
+    public void testAddAssignment_emptyStringId_throwsException(){
+        Exception exception = assertThrows(ValidationException.class, () -> {
+            service.saveTema("", "desc", 5, 7);
+        });
+        assertEquals("ID invalid! \n", exception.getMessage());
+    }
+
+
 
 }

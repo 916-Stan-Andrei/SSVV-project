@@ -5,6 +5,7 @@ import ssvv.example.domain.Nota;
 import ssvv.example.domain.Student;
 import ssvv.example.domain.Tema;
 import ssvv.example.service.Service;
+import ssvv.example.validation.ValidationException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -95,11 +96,14 @@ public class UI {
         System.out.println("Introduceti saptamana startline a temei: ");
         int startline = scanner.nextInt();
 
+        try{
         if (service.saveTema(id, descriere, deadline, startline) != 0) {
             System.out.println("Tema adaugata cu succes! \n");
         }
         else {
             System.out.println("Tema existenta sau invalida! \n");
+        }}catch(ValidationException ve){
+            System.out.println(ve.getMessage());
         }
     }
 
