@@ -89,13 +89,13 @@ public class TestAddGrade {
         studentXMLRepository.clearAllStudents();}
 
     @Test
-    public void testAddAssignment_deadlineAndStartlineInTheValidRange_assignmentSuccessfullyAdded(){
+    public void testAddAssignmentIntegrated_deadlineAndStartlineInTheValidRange_assignmentSuccessfullyAdded(){
         assertEquals(1, service.saveTema("1", "descriere1", 2, 1));
         assertEquals(1, service.saveTema("2", "descriere2", 3, 2));
     }
 
     @Test
-    public void testAddStudent_nameIsAlphabetical_addsStudentCorrectly(){
+    public void testAddStudentIntegrated_nameIsAlphabetical_addsStudentCorrectly(){
         assertEquals(1, service.saveStudent("1", "Bob", 211));
         assertEquals(1, service.saveStudent("2", "Maria", 211));
         assertEquals(1, service.saveStudent("3", "Ion", 211));
@@ -120,8 +120,8 @@ public class TestAddGrade {
 
     @Test
     public void testAll(){
-        testAddAssignment_deadlineAndStartlineInTheValidRange_assignmentSuccessfullyAdded();
-        testAddStudent_nameIsAlphabetical_addsStudentCorrectly();
+        testAddAssignmentIntegrated_deadlineAndStartlineInTheValidRange_assignmentSuccessfullyAdded();
+        testAddStudentIntegrated_nameIsAlphabetical_addsStudentCorrectly();
         testAddNota_GradeWithCorrectParams_GradeAddedSuccessfully();
     }
 
