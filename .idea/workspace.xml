@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a5a573d-f975-4b3a-89db-fff580ca9a20" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/TestAddAssignment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaXMLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/repository/TemaXMLRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a5a573d-f975-4b3a-89db-fff580ca9a20" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -146,6 +142,7 @@
       <workItem from="1712231498622" duration="2253000" />
       <workItem from="1712237521669" duration="12305000" />
       <workItem from="1712294880598" duration="1271000" />
+      <workItem from="1713502786016" duration="51000" />
     </task>
     <servers />
   </component>

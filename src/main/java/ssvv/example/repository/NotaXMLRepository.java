@@ -67,6 +67,10 @@ public class NotaXMLRepository extends AbstractXMLRepository<Pair<String, String
             ioe.printStackTrace();
         }
     }
+    public void clearAllGrades() {
+        clearAllEntities();
+    }
+
 }
 //    public void createFile(Nota notaObj) {
 //        String idStudent = notaObj.getID().getObject1();

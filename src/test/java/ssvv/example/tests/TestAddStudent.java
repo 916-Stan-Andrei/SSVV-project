@@ -43,7 +43,7 @@ public class TestAddStudent {
                 }
             }
         };
-        studentXMLRepository = new StudentXMLRepository(studentValidator, "testStudent");
+        studentXMLRepository = new StudentXMLRepository(studentValidator, "testStudent.xml");
         service = new Service(studentXMLRepository, null, null);
         ui = new UI(service);
     }

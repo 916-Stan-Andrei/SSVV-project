@@ -38,7 +38,7 @@ public class TestAddAssignment {
             }
         };
 
-        temaXMLRepository = new TemaXMLRepository(temaValidator, "testTema");
+        temaXMLRepository = new TemaXMLRepository(temaValidator, "testTema.xml");
         service = new Service(null, temaXMLRepository, null);
         UI ui = new UI(service);
     }
