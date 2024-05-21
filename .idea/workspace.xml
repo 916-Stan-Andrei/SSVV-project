@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a5a573d-f975-4b3a-89db-fff580ca9a20" name="Changes" comment="" />
+    <list default="true" id="1a5a573d-f975-4b3a-89db-fff580ca9a20" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ssvv/example/tests/IncrementalIntegration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ssvv/example/service/Service.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,10 +49,10 @@
       <recent name="C:\Users\stanbydrew\Desktop\University\Sem6\SSVV\Lab1\LabAssiAsseProject\src\main\java\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded">
+  <component name="RunManager" selected="JUnit.IncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssvv.example.Main" />
-      <module name="LabAssiAsseProject" />
+      <module name="SSVV-project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ssvv.example.*" />
@@ -59,8 +63,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAddAssignment" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LabAssiAsseProject" />
+    <configuration name="IncrementalIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV-project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ssvv.example.tests.*" />
@@ -68,8 +72,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddAssignment" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.IncrementalIntegration" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.IncrementalIntegration" />
+      <option name="METHOD_NAME" value="testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,8 +110,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestAddStudent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LabAssiAsseProject" />
+    <configuration name="TestAddGrade.testAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV-project" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ssvv.example.tests.*" />
@@ -99,23 +119,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddStudent" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestAddStudent.testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LabAssiAsseProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddStudent" />
-      <option name="METHOD_NAME" value="testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestAddGrade" />
+      <option name="METHOD_NAME" value="testAll" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -123,11 +128,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded" />
-        <item itemvalue="JUnit.TestAddAssignment" />
-        <item itemvalue="JUnit.TestAddStudent" />
+        <item itemvalue="JUnit.IncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" />
+        <item itemvalue="JUnit.TestAddGrade.testAll" />
+        <item itemvalue="JUnit.IncrementalIntegration" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.TestAddStudent.testAddStudent_groupIsNaturalNumberGreaterThanMaxInt_throwsException" />
+        <item itemvalue="JUnit.TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded" />
       </list>
     </recent_temporary>
   </component>
@@ -143,6 +148,8 @@
       <workItem from="1712237521669" duration="12305000" />
       <workItem from="1712294880598" duration="1271000" />
       <workItem from="1713502786016" duration="51000" />
+      <workItem from="1713691125776" duration="30000" />
+      <workItem from="1716285224138" duration="2615000" />
     </task>
     <servers />
   </component>

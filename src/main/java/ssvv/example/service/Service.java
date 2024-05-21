@@ -75,8 +75,6 @@ public class Service {
 
             if (predata - deadline > 2) {
                 valNota =  1;
-            } else {
-                valNota =  valNota - 2.5 * (predata - deadline);
             }
             Nota nota = new Nota(new Pair(idStudent, idTema), valNota, predata, feedback);
             Nota result = notaXmlRepo.save(nota);
