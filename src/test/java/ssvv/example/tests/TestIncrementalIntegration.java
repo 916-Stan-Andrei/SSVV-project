@@ -15,7 +15,7 @@ import ssvv.example.validation.Validator;
 
 import static org.junit.Assert.assertEquals;
 
-public class IncrementalIntegration {
+public class TestIncrementalIntegration {
     private NotaXMLRepository notaXMLRepository;
 
     private TemaXMLRepository temaXMLRepository;

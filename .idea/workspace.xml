@@ -49,7 +49,7 @@
       <recent name="C:\Users\stanbydrew\Desktop\University\Sem6\SSVV\Lab1\LabAssiAsseProject\src\main\java\ssvv\example" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ssvv.example.Main" />
       <module name="SSVV-project" />
@@ -59,37 +59,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncrementalIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSVV-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.IncrementalIntegration" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SSVV-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ssvv.example.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
-      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.IncrementalIntegration" />
-      <option name="METHOD_NAME" value="testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -126,11 +95,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestIncrementalIntegration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestIncrementalIntegration" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestIncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SSVV-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ssvv.example.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ssvv.example.tests" />
+      <option name="MAIN_CLASS_NAME" value="ssvv.example.tests.TestIncrementalIntegration" />
+      <option name="METHOD_NAME" value="testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" />
+        <item itemvalue="JUnit.TestIncrementalIntegration.testAddNotaIncrementallyIntegrated_GradeWithCorrectParams_GradeAddedSuccessfully" />
         <item itemvalue="JUnit.TestAddGrade.testAll" />
-        <item itemvalue="JUnit.IncrementalIntegration" />
+        <item itemvalue="JUnit.TestIncrementalIntegration" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestAddAssignment.testAddAssignment_deadlineAndStartlineNotInTheValidRange_assignmentNotAdded" />
       </list>
